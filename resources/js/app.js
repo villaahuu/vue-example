@@ -1,7 +1,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-
+Vue.component('pagination', require('laravel-vue-pagination'))
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
@@ -10,6 +10,10 @@ import axios from 'axios';
 
 import App from './App.vue';
 Vue.use(VueAxios, axios);
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+
+Vue.use(Buefy)
 
 import HomeComponent from './components/HomeComponent.vue';
 import CreateComponent from './components/CreatePost.vue';
